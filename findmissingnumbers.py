@@ -44,14 +44,14 @@ Input: [3, 3, 3, 3, 4, 7] Output: [5, 6]
 """
 class Solution:
     def findMissingNumbers(self, numbers):
+        int_list = [int(i) for i in numbers]
         out = []
-        
-        for i in range(0, max(numbers)):
+        for i in range(1, max(int_list)):
             w_in = False
-            for j in numbers:
-                if i in numbers or float(i) in numbers:
+            for j in int_list:
+                if i in numbers:
                     w_in = True
-            if w_in:
+            if not w_in:
                 out.append(i)
         return out
         

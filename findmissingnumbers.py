@@ -53,6 +53,7 @@ class Solution:
                     w_in = True
             if w_in:
                 out.append(i)
+        return out
 def main():
     array = input().split(" ")
     for x in range (0, len(array)):

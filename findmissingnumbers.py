@@ -42,7 +42,6 @@ Input: [3, 4, 2, 1, 6, 7, 5, 9, 10] Output:[8]
 Input: [3, 3, 3, 3, 4, 7] Output: [5, 6]
 
 """
-from math import isclose
 class Solution:
     def findMissingNumbers(self, numbers):
         out = []
@@ -50,7 +49,7 @@ class Solution:
         for i in range(0, max(numbers)):
             w_in = False
             for j in numbers:
-                if isclose(float(i), float(j)):
+                if i in numbers or float(i) in numbers:
                     w_in = True
             if w_in:
                 out.append(i)

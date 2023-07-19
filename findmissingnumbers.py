@@ -46,7 +46,7 @@ class Solution:
     def findMissingNumbers(self, numbers):
         int_list = [int(i) for i in numbers]
         out = []
-        for i in range(1, max(int_list)):
+        for i in range(min(int_list), max(int_list)):
             w_in = False
             for j in int_list:
                 if i in numbers:

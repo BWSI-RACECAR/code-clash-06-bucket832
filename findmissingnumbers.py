@@ -46,14 +46,16 @@ from math import isclose
 class Solution:
     def findMissingNumbers(self, numbers):
         out = []
-        w_in = False
-        for i in range(1, max(numbers)):
+        
+        for i in range(0, max(numbers)):
+            w_in = False
             for j in numbers:
                 if isclose(float(i), float(j)):
                     w_in = True
             if w_in:
                 out.append(i)
         return out
+        
 def main():
     array = input().split(" ")
     for x in range (0, len(array)):

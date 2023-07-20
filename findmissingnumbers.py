@@ -45,12 +45,12 @@ Input: [3, 3, 3, 3, 4, 7] Output: [5, 6]
 class Solution:
     def findMissingNumbers(self, numbers):
         print(numbers)
-        int_list = [int(i) for i in numbers]
+        int_list = [int(round(i)) for i in numbers]
         out = []
         for i in range(min(int_list), max(int_list)):
             w_in = False
             for j in int_list:
-                if i in numbers:
+                if i in int_list:
                     w_in = True
                     break
             if not w_in:

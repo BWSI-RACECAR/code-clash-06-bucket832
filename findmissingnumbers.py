@@ -45,6 +45,8 @@ Input: [3, 3, 3, 3, 4, 7] Output: [5, 6]
 class Solution:
     def findMissingNumbers(self, numbers):
         print(numbers)
+        if len(numbers) == 0:
+            return None
         int_list = [int(i) for i in numbers]
         out = []
         for i in range(min(int_list), max(int_list)):
@@ -55,6 +57,7 @@ class Solution:
                     break
             if not w_in:
                 out.append(i)
+
         return out
         
 def main():
@@ -63,7 +66,7 @@ def main():
     
 
     tc1 = Solution()
-    ans = tc1.findMissingNumbers(array)
+    ans = tc1.findMissingNumbers([])
     print(ans)
 
 if __name__ == "__main__":

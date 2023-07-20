@@ -51,14 +51,15 @@ class Solution:
             for j in int_list:
                 if i in numbers:
                     w_in = True
+                    break
             if not w_in:
                 out.append(i)
         return out
         
 def main():
-    array = input().split(" ")
-    for x in range (0, len(array)):
-        array[x] = float(array[x])
+    array = input().strip().split(" ")
+    array = [float(i) for i in array]
+    
 
     tc1 = Solution()
     ans = tc1.findMissingNumbers(array)

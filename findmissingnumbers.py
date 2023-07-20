@@ -64,7 +64,7 @@ def main():
     
 
     tc1 = Solution()
-    ans = tc1.findMissingNumbers([])
+    ans = tc1.findMissingNumbers(array)
     print(ans)
 
 if __name__ == "__main__":
